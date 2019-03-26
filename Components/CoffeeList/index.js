@@ -10,6 +10,10 @@ import coffeeshops from "./list";
 import CoffeeItem from "./CoffeeItem";
 
 class CoffeeList extends Component {
+  static navigationOptions = {
+    header: null
+  };
+
   render() {
     const { coffeeShops, loading } = this.props.coffeeReducer;
     let shops;

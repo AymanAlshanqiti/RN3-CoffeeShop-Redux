@@ -13,7 +13,19 @@ const MyStack = createStackNavigator(
     Login: Login
   },
   {
-    initialRouteName: "Login"
+    initialRouteName: "Login",
+    cardStyle: {
+      backgroundColor: "rgb(20,90,100)"
+    },
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "rgb(20,90,100)"
+      },
+      headerTitleStyle: {
+        fontWeight: "bold"
+      },
+      headerTintColor: "white"
+    }
   }
 );
 

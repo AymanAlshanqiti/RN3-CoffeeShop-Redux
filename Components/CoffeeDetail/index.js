@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { navigation } from "react-navigation";
+
+import CartButton from "../CartButton";
+
 // NativeBase Components
 import {
   Thumbnail,
@@ -22,6 +26,13 @@ import styles from "./styles";
 import coffeeshops from "../CoffeeList/list";
 
 class CoffeeDetail extends Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam("coffeeShop").name,
+      headerRight: <CartButton />
+    };
+  };
+
   state = {
     drink: "Cappuccino",
     option: "Small"

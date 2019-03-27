@@ -22,7 +22,6 @@ class HomePage extends Component {
     return (
       <Container style={styles.transparent}>
         <View style={styles.overlay} />
-        <Header style={styles.transparent} />
         <AppContainer />
       </Container>
     );

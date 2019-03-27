@@ -20,7 +20,7 @@ const BottomTab = createBottomTabNavigator(
         let iconType = "";
 
         if (routeName === "Auth") {
-          iconName = "home";
+          iconName = "user";
           iconType = "FontAwesome";
         } else if (routeName === "Coffee") {
           iconName = "coffee";
@@ -30,15 +30,19 @@ const BottomTab = createBottomTabNavigator(
           iconType = "MaterialCommunityIcons";
         }
         return (
-          <Icon name={iconName} type={iconType} style={{ color: tintColor }} />
+          <Icon
+            name={iconName}
+            type={iconType}
+            style={{ color: tintColor, fontSize: 25 }}
+          />
         );
       }
     }),
     tabBarOptions: {
       showLabel: false,
-      activeTintColor: "b8cdd0",
-      activeBackgroundColor: "white",
-      inactiveTintColor: "white",
+      activeTintColor: "white",
+      // activeBackgroundColor: "white",
+      inactiveTintColor: "b8cdd0",
       style: {
         backgroundColor: "rgb(20,90,100)"
       }
